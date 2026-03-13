@@ -24,13 +24,8 @@
       --shadow:0 20px 60px rgba(0,0,0,0.35);
     }
 
-    *{
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
 
     body{
       margin:0;
@@ -75,9 +70,7 @@
       transition:0.25s ease;
     }
 
-    .nav-link:hover{
-      color:#fff !important;
-    }
+    .nav-link:hover{ color:#fff !important; }
 
     .hero{
       padding:110px 0 80px;
@@ -133,9 +126,7 @@
       display:inline-block;
     }
 
-    .meaning strong{
-      color:#fff;
-    }
+    .meaning strong{ color:#fff; }
 
     .hero-actions{
       display:flex;
@@ -153,6 +144,8 @@
       border-radius:14px;
       box-shadow:0 12px 30px rgba(14,165,233,0.28);
       transition:0.25s ease;
+      text-decoration:none;
+      display:inline-block;
     }
 
     .btn-main:hover{
@@ -168,6 +161,8 @@
       font-weight:600;
       border-radius:14px;
       transition:0.25s ease;
+      text-decoration:none;
+      display:inline-block;
     }
 
     .btn-outline-soft:hover{
@@ -234,9 +229,7 @@
       font-size:1.1rem;
     }
 
-    .app-top small{
-      color:var(--muted);
-    }
+    .app-top small{ color:var(--muted); }
 
     .chat-card{
       background:rgba(255,255,255,0.04);
@@ -274,9 +267,7 @@
       box-shadow:0 12px 24px rgba(14,165,233,0.3);
     }
 
-    .section{
-      padding:90px 0;
-    }
+    .section{ padding:90px 0; }
 
     .section-title{
       font-size:clamp(2rem, 4vw, 3rem);
@@ -342,9 +333,7 @@
       height:100%;
     }
 
-    .about-box h5{
-      margin-bottom:10px;
-    }
+    .about-box h5{ margin-bottom:10px; }
 
     .about-box p{
       color:var(--muted);
@@ -433,13 +422,8 @@
     }
 
     @media (max-width: 991px){
-      .hero{
-        padding-top:90px;
-      }
-
-      .hero-content{
-        text-align:center;
-      }
+      .hero{ padding-top:90px; }
+      .hero-content{ text-align:center; }
 
       .hero-subtitle,
       .section-subtitle{
@@ -452,31 +436,15 @@
         justify-content:center;
       }
 
-      .hero-visual{
-        margin-top:44px;
-      }
+      .hero-visual{ margin-top:44px; }
     }
 
     @media (max-width: 767px){
-      .hero-title{
-        font-size:2.6rem;
-      }
-
-      .phone-screen{
-        min-height:460px;
-      }
-
-      .about-wrap{
-        padding:24px;
-      }
-
-      .download-panel{
-        padding:28px 20px;
-      }
-
-      .stats{
-        grid-template-columns:1fr;
-      }
+      .hero-title{ font-size:2.6rem; }
+      .phone-screen{ min-height:460px; }
+      .about-wrap{ padding:24px; }
+      .download-panel{ padding:28px 20px; }
+      .stats{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -497,6 +465,7 @@
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="updates.html">Update Report</a></li>
           <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
         </ul>
       </div>
@@ -526,8 +495,8 @@
           </div>
 
           <div class="hero-actions reveal">
-            <a href="vartalabh.apk" class="btn btn-main">Download Android App</a>
-            <a href="#features" class="btn btn-outline-soft">Explore Features</a>
+            <a href="https://github.com/idcare19/Vartalabh-/releases/download/v1.2.0/vartalabh.apk" class="btn-main" target="_blank" rel="noopener noreferrer">Download Android App</a>
+            <a href="updates.html" class="btn-outline-soft">View Update Report</a>
           </div>
 
           <div class="hero-meta reveal">
@@ -539,7 +508,7 @@
 
         <div class="col-lg-5">
           <div class="hero-visual reveal">
-            <div class="floating-pill">Simple • Private • Fast</div>
+            <div class="floating-pill">v1.2.0 Live</div>
             <div class="phone-shell">
               <div class="phone-screen">
                 <div class="app-top">
@@ -592,49 +561,49 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="feature-card reveal">
+            <div class="feature-icon">🔐</div>
+            <h4>Flexible Login</h4>
+            <p>Users can sign up and log in using email or username, making access smoother and less annoying.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal">
             <div class="feature-icon">⚡</div>
             <h4>Fast Messaging</h4>
-            <p>Built for responsive, real-time communication so conversations feel smooth instead of laggy and annoying.</p>
+            <p>Built for responsive, real-time communication so conversations feel smooth instead of laggy and crusty.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="feature-card reveal">
-            <div class="feature-icon">🔒</div>
-            <h4>Privacy First</h4>
-            <p>Your conversations matter. Vartalabh is designed with privacy and trust at the center of the experience.</p>
+            <div class="feature-icon">🖼️</div>
+            <h4>Profile Pictures</h4>
+            <p>Users can personalize their presence with profile photos for a more social and familiar experience.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="feature-card reveal">
-            <div class="feature-icon">🧭</div>
-            <h4>Clean Interface</h4>
-            <p>A focused design helps users navigate naturally, keeping attention on communication instead of distractions.</p>
+            <div class="feature-icon">💬</div>
+            <h4>Reply & Reactions</h4>
+            <p>Reply to specific messages and react with emotion, so chats feel more alive and less like stone tablets.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="feature-card reveal">
-            <div class="feature-icon">🌍</div>
-            <h4>Modern Communication</h4>
-            <p>Stay connected with people anywhere through a product built for today’s mobile-first world.</p>
+            <div class="feature-icon">✏️</div>
+            <h4>Edit & Delete</h4>
+            <p>Messages can be updated or removed when needed, because humans occasionally type nonsense at light speed.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="feature-card reveal">
-            <div class="feature-icon">🎯</div>
-            <h4>Purposeful Experience</h4>
-            <p>Every section of the app is meant to make conversation feel clearer, lighter, and more meaningful.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-card reveal">
-            <div class="feature-icon">🇮🇳</div>
-            <h4>Rooted in Identity</h4>
-            <p>The name comes from Sanskrit, giving the product a cultural core instead of another random tech-bro syllable salad.</p>
+            <div class="feature-icon">🌗</div>
+            <h4>Dark & Light Mode</h4>
+            <p>Choose the theme that fits your mood, your eyes, or your late-night bug-fixing ritual.</p>
           </div>
         </div>
       </div>
@@ -656,12 +625,12 @@
 
             <div class="stats">
               <div class="stat-card">
-                <h3>Fast</h3>
-                <p>Built for smooth usage</p>
+                <h3>v1.2.0</h3>
+                <p>Current release</p>
               </div>
               <div class="stat-card">
-                <h3>Clean</h3>
-                <p>Minimal visual design</p>
+                <h3>Fast</h3>
+                <p>Smooth chat experience</p>
               </div>
               <div class="stat-card">
                 <h3>Private</h3>
@@ -687,13 +656,13 @@
               <div class="col-sm-6">
                 <div class="about-box">
                   <h5>Cultural identity</h5>
-                  <p>“वार्तालाभ” adds a meaningful identity that makes the product more memorable and grounded.</p>
+                  <p>“वार्तालाभ” gives the product a grounded identity instead of random startup alphabet soup.</p>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="about-box">
                   <h5>User-first design</h5>
-                  <p>From structure to typography, the site is crafted to build trust and guide attention clearly.</p>
+                  <p>From messaging to themes, the experience is built to feel simple, useful, and human.</p>
                 </div>
               </div>
             </div>
@@ -708,13 +677,13 @@
       <div class="download-panel reveal">
         <h2 class="section-title mb-3">Download Vartalabh</h2>
         <p>
-          Get the latest Android build of Vartalabh and experience a cleaner way to stay connected. Simple, thoughtful, and made for meaningful conversations.
+          Get the latest Android build of Vartalabh and experience a cleaner way to stay connected. Version 1.2.0 includes login with email or username, profile pictures, message editing, replies, reactions, and dark/light mode.
         </p>
 
-        <a href="vartalabh.apk" class="btn btn-main">Download APK</a>
+        <a href="https://github.com/idcare19/Vartalabh-/releases/download/v1.2.0/vartalabh.apk" class="btn-main" target="_blank" rel="noopener noreferrer">Download APK</a>
 
         <div class="download-info">
-          <span>Version 1.0</span>
+          <span>Version 1.2.0</span>
           <span>Android APK</span>
           <span>Made in India 🇮🇳</span>
         </div>
