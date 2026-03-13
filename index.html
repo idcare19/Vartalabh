@@ -21,7 +21,6 @@
       --primary:#38bdf8;
       --primary-dark:#0ea5e9;
       --success:#22c55e;
-      --warning:#f59e0b;
       --shadow:0 20px 60px rgba(0,0,0,0.35);
     }
 
@@ -204,7 +203,7 @@
       background:linear-gradient(180deg, #101b2d 0%, #0a1424 100%);
       border-radius:24px;
       padding:20px;
-      min-height:560px;
+      min-height:520px;
       position:relative;
       overflow:hidden;
       border:1px solid rgba(255,255,255,0.05);
@@ -268,46 +267,6 @@
       box-shadow:0 12px 24px rgba(14,165,233,0.3);
     }
 
-    .progress-card{
-      margin-top:18px;
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:18px;
-      padding:16px;
-    }
-
-    .progress-head{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom:12px;
-      font-size:14px;
-      color:#dbeafe;
-      font-weight:600;
-    }
-
-    .custom-progress{
-      width:100%;
-      height:12px;
-      background:rgba(255,255,255,0.07);
-      border-radius:999px;
-      overflow:hidden;
-    }
-
-    .custom-progress-bar{
-      width:88%;
-      height:100%;
-      background:linear-gradient(90deg, var(--primary), var(--success));
-      border-radius:999px;
-    }
-
-    .progress-note{
-      margin-top:10px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.6;
-    }
-
     .section{ padding:90px 0; }
 
     .section-title{
@@ -325,9 +284,7 @@
       line-height:1.8;
     }
 
-    .feature-card,
-    .creator-card,
-    .update-card{
+    .feature-card{
       height:100%;
       background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       border:1px solid var(--line);
@@ -337,16 +294,12 @@
       transition:0.25s ease;
     }
 
-    .feature-card:hover,
-    .creator-card:hover,
-    .update-card:hover{
+    .feature-card:hover{
       transform:translateY(-6px);
       border-color:rgba(56,189,248,0.24);
     }
 
-    .feature-icon,
-    .creator-icon,
-    .update-icon{
+    .feature-icon{
       width:56px;
       height:56px;
       display:grid;
@@ -358,9 +311,7 @@
       margin-bottom:18px;
     }
 
-    .feature-card p,
-    .creator-card p,
-    .update-card p{
+    .feature-card p{
       color:var(--muted);
       line-height:1.75;
       margin-bottom:0;
@@ -414,38 +365,6 @@
       margin:6px 0 0;
       color:var(--muted);
       font-size:14px;
-    }
-
-    .creator-meta{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      margin-top:14px;
-      color:#d7e5f3;
-    }
-
-    .creator-tag{
-      display:inline-block;
-      margin-top:14px;
-      padding:9px 14px;
-      border-radius:999px;
-      background:rgba(56,189,248,0.12);
-      border:1px solid rgba(56,189,248,0.20);
-      color:#dbeafe;
-      font-size:14px;
-      font-weight:600;
-    }
-
-    .update-badge{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(34,197,94,0.12);
-      color:#bbf7d0;
-      border:1px solid rgba(34,197,94,0.24);
-      font-size:13px;
-      font-weight:700;
-      margin-bottom:16px;
     }
 
     .download-panel{
@@ -522,7 +441,7 @@
 
     @media (max-width: 767px){
       .hero-title{ font-size:2.6rem; }
-      .phone-screen{ min-height:500px; }
+      .phone-screen{ min-height:460px; }
       .about-wrap{ padding:24px; }
       .download-panel{ padding:28px 20px; }
       .stats{ grid-template-columns:1fr; }
@@ -545,8 +464,6 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#creator">Creator</a></li>
-          <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="updates.html">Update Report</a></li>
           <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
@@ -579,7 +496,7 @@
 
           <div class="hero-actions reveal">
             <a href="https://github.com/idcare19/Vartalabh/releases/download/v2.1.0/vartalabh.apk" class="btn-main" target="_blank" rel="noopener noreferrer">Download Android App</a>
-            <a href="#updates" class="btn-outline-soft">See Latest Updates</a>
+            <a href="updates.html" class="btn-outline-soft">View Update Report</a>
           </div>
 
           <div class="hero-meta reveal">
@@ -591,7 +508,7 @@
 
         <div class="col-lg-5">
           <div class="hero-visual reveal">
-            <div class="floating-pill">v2.1.0 Live</div>
+            <div class="floating-pill">v1.2.0 Live</div>
             <div class="phone-shell">
               <div class="phone-screen">
                 <div class="app-top">
@@ -620,17 +537,10 @@
                   <div class="chat-line" style="width:55%;"></div>
                 </div>
 
-                <div class="progress-card">
-                  <div class="progress-head">
-                    <span>Meaningful Experience</span>
-                    <span>88%</span>
-                  </div>
-                  <div class="custom-progress">
-                    <div class="custom-progress-bar"></div>
-                  </div>
-                  <div class="progress-note">
-                    A focused communication experience with cleaner UI, better flow, and smoother interaction.
-                  </div>
+                <div class="chat-card mb-0">
+                  <div class="chat-line success" style="width:74%;"></div>
+                  <div class="chat-line" style="width:61%;"></div>
+                  <div class="chat-line" style="width:28%; margin-bottom:0;"></div>
                 </div>
               </div>
             </div>
@@ -645,7 +555,7 @@
     <div class="container">
       <h2 class="section-title reveal">Why people choose Vartalabh</h2>
       <p class="section-subtitle reveal">
-        A modern communication platform should feel effortless. No clutter, no chaos, no interface doing acrobatics for attention.
+        A modern communication platform should feel effortless. No clutter, no chaos, no interface doing backflips for attention.
       </p>
 
       <div class="row g-4">
@@ -700,42 +610,91 @@
     </div>
   </section>
 
-  <section class="section" id="creator">
+  <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title reveal">Creator</h2>
-      <p class="section-subtitle reveal">
-        Built with intention by a young developer shaping a modern Indian communication app from the ground up.
-      </p>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <div class="creator-card reveal text-center">
-            <div class="creator-icon mx-auto">👨‍💻</div>
-            <h3>idcare19 , avi</h3>
-            <p>
-              Full Stack Developer
+      <div class="about-wrap reveal">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="mb-3">About Vartalabh</h2>
+            <p class="text-light-emphasis" style="color: var(--muted); line-height:1.85;">
+              Vartalabh is a messaging platform shaped around one idea: conversation should feel natural, fast, and meaningful. Instead of drowning users in noise, it focuses on clarity, trust, and smooth interaction.
+            </p>
+            <p class="mb-0" style="color: var(--muted); line-height:1.85;">
+              The name itself carries intention. Rooted in Sanskrit, it reflects exchange, dialogue, and connection — a fitting foundation for a communication app built to bring people together.
             </p>
 
-            <div class="creator-meta align-items-center">
-              <span>Creator: <strong>idcare19 / Avi</strong></span>
-              <span>Role: <strong>Full Stack Developer</strong></span>
-              <span>Age: <strong>17</strong></span>
+            <div class="stats">
+              <div class="stat-card">
+                <h3>v1.2.0</h3>
+                <p>Current release</p>
+              </div>
+              <div class="stat-card">
+                <h3>Fast</h3>
+                <p>Smooth chat experience</p>
+              </div>
+              <div class="stat-card">
+                <h3>Private</h3>
+                <p>Focused on trust</p>
+              </div>
             </div>
+          </div>
 
-            <div class="creator-tag">Building Vartalabh with vision, code, and stubborn patience</div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="about-box">
+                  <h5>Clear purpose</h5>
+                  <p>A communication app should help people connect, not wrestle with cluttered interfaces.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-box">
+                  <h5>Modern foundation</h5>
+                  <p>Designed for current mobile habits with a smooth and focused interaction model.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-box">
+                  <h5>Cultural identity</h5>
+                  <p>“वार्तालाभ” gives the product a grounded identity instead of random startup alphabet soup.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-box">
+                  <h5>User-first design</h5>
+                  <p>From messaging to themes, the experience is built to feel simple, useful, and human.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="updates">
+  <section class="section" id="download">
     <div class="container">
-      <h2 class="section-title reveal">Latest Update Details</h2>
-      <p class="section-subtitle reveal">
-        Fresh improvements to make Vartalabh feel cleaner, smoother, and more enjoyable in daily use.
-      </p>
+      <div class="download-panel reveal">
+        <h2 class="section-title mb-3">Download Vartalabh</h2>
+        <p>
+          Get the latest Android build of Vartalabh and experience a cleaner way to stay connected. Version 1.2.0 includes login with email or username, profile pictures, message editing, replies, reactions, and dark/light mode.
+        </p>
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="u
+        <a href="https://github.com/idcare19/Vartalabh/releases/download/v2.1.0/vartalabh.apk" class="btn-main" target="_blank" rel="noopener noreferrer">Download APK</a>
+
+        <div class="download-info">
+          <span>Version 1.2.0</span>
+          <span>Android APK</span>
+          <span>Made in India 🇮🇳</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Made in India 🇮🇳 • Vartalabh • Meaningful conversations, rooted in Sanskrit.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
