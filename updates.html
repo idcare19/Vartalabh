@@ -1,181 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vartalabh — Update Report</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vartalabh Update Report</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<style>
+  <style>
+    :root{
+      --bg:#081120;
+      --card:#101b2d;
+      --line:rgba(255,255,255,0.08);
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --primary:#38bdf8;
+      --primary-dark:#0ea5e9;
+      --shadow:0 20px 60px rgba(0,0,0,0.35);
+    }
 
-body{
-margin:0;
-background:#081120;
-color:white;
-font-family:'Inter',sans-serif;
-}
+    *{ box-sizing:border-box; }
 
-.navbar{
-background:#0b1322;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(34,197,94,0.07), transparent 24%),
+        linear-gradient(180deg, #09111f 0%, #0b1322 45%, #081120 100%);
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      min-height:100vh;
+    }
 
-.section{
-padding:80px 0;
-}
+    h1,h2,h3,h4,h5,h6,.brand-text{ font-family:'Poppins', sans-serif; letter-spacing:-0.02em; }
 
-.card-box{
-background:#101b2d;
-border:1px solid rgba(255,255,255,0.08);
-border-radius:16px;
-padding:25px;
-margin-bottom:25px;
-}
+    .navbar{
+      background:rgba(8,17,32,0.78);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
 
-.feature{
-margin-top:10px;
-color:#94a3b8;
-}
+    .navbar-brand{ color:#fff !important; font-weight:700; }
+    .nav-link{ color:#cbd5e1 !important; font-weight:500; }
+    .nav-link:hover{ color:#fff !important; }
 
-.compare-box{
-background:#101b2d;
-border:1px solid rgba(255,255,255,0.08);
-border-radius:16px;
-padding:20px;
-}
+    .header{
+      padding:100px 0 38px;
+      text-align:center;
+    }
 
-footer{
-padding:40px;
-text-align:center;
-color:#94a3b8;
-border-top:1px solid rgba(255,255,255,0.08);
-}
+    .badge-version{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.04);
+      color:#dbeafe;
+      font-weight:600;
+      font-size:14px;
+      margin-bottom:16px;
+    }
 
-</style>
+    .title{ font-size:clamp(2.2rem, 5vw, 3.5rem); margin-bottom:14px; }
+
+    .subtitle{
+      color:var(--muted);
+      max-width:760px;
+      margin:0 auto;
+      line-height:1.8;
+    }
+
+    .section{ padding:24px 0 78px; }
+
+    .version-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      height:100%;
+    }
+
+    .version-card h3{ margin-bottom:8px; }
+
+    .version-label{
+      color:#7dd3fc;
+      font-size:0.95rem;
+      font-weight:600;
+      margin-bottom:18px;
+      display:block;
+    }
+
+    .updates-list{ margin:0; padding-left:18px; }
+
+    .updates-list li{
+      color:#d8e4f2;
+      margin-bottom:10px;
+      line-height:1.7;
+    }
+
+    .cta-box{
+      margin-top:34px;
+      text-align:center;
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+    }
+
+    .btn-main{
+      background:linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color:#fff;
+      border:none;
+      padding:13px 22px;
+      font-weight:700;
+      border-radius:12px;
+      text-decoration:none;
+      display:inline-block;
+      margin:6px;
+    }
+
+    .btn-main:hover{ color:#fff; transform:translateY(-1px); }
+
+    .btn-soft{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.03);
+      color:#fff;
+      padding:13px 20px;
+      border-radius:12px;
+      text-decoration:none;
+      display:inline-block;
+      margin:6px;
+    }
+
+    .btn-soft:hover{ color:#fff; background:rgba(255,255,255,0.07); }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:26px 0 36px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 767px){
+      .header{ padding-top:88px; }
+      .version-card{ padding:22px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav class="navbar navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="index.html">
-<img src="logo.png" width="35"> Vartalabh
-</a>
-</div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand-text" href="index.html">Vartalabh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="updates.html">Update Report</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#download">Download</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<section class="section">
-<div class="container">
+  <header class="header">
+    <div class="container">
+      <span class="badge-version">Vartalabh — Update Timeline</span>
+      <h1 class="title">Release & Update Report</h1>
+      <p class="subtitle">
+        Vartalabh is built for fast and meaningful conversations. Here’s what improved across major versions and how the platform evolved from core messaging to a faster, modern experience.
+      </p>
+    </div>
+  </header>
 
-<h1 class="text-center mb-5">Vartalabh Update Report</h1>
+  <main class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <article class="version-card">
+            <h3>Latest Version — v3.1.0</h3>
+            <span class="version-label">Modern messaging improvements</span>
+            <ul class="updates-list">
+              <li>Group Chat for smoother multi-user conversations.</li>
+              <li>Voice Messages support for quick audio communication.</li>
+              <li>Image Sharing in Chat for richer interactions.</li>
+              <li>Push Notifications for real-time message awareness.</li>
+              <li>Seen / Delivered Status for message tracking.</li>
+              <li>Unread Badge Counts for quick inbox visibility.</li>
+              <li>Username Search to discover users faster.</li>
+              <li>Block User option to prevent unwanted chats.</li>
+              <li>Report User system for safer community behavior.</li>
+              <li>Delete for Me / Delete for Everyone controls.</li>
+              <li>Faster chat loading and improved UI.</li>
+            </ul>
+          </article>
+        </div>
 
+        <div class="col-lg-4">
+          <article class="version-card">
+            <h3>Previous Version — v2.3.0</h3>
+            <span class="version-label">Earlier messaging upgrades</span>
+            <ul class="updates-list">
+              <li>Improved one-to-one chat performance and reliability.</li>
+              <li>Better message delivery feedback in active conversations.</li>
+              <li>Enhanced unread message visibility in chat lists.</li>
+              <li>Cleaner conversation layout and improved readability.</li>
+              <li>Profile and username handling refinements.</li>
+              <li>Notification behavior tuned for more stable alerts.</li>
+            </ul>
+          </article>
+        </div>
 
-<div class="card-box">
+        <div class="col-lg-4">
+          <article class="version-card">
+            <h3>Foundation Version — v1.2.0</h3>
+            <span class="version-label">Core features that started it all</span>
+            <ul class="updates-list">
+              <li>Core user-to-user messaging support.</li>
+              <li>Basic account and identity setup for chat access.</li>
+              <li>Initial conversation list and message thread screens.</li>
+              <li>Early send/receive message pipeline.</li>
+              <li>First implementation of lightweight mobile chat UX.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
 
-<h3>Latest Version — v2.1.0</h3>
+      <div class="cta-box">
+        <a href="https://github.com/idcare19/Vartalabh/releases/download/v3.1.0/app-arm64-v8a-release.apk" class="btn-main" target="_blank" rel="noopener noreferrer">Download for Modern Android</a>
+        <a href="https://github.com/idcare19/Vartalabh/releases/download/v3.1.0/app-armeabi-v7a-release.apk" class="btn-soft" target="_blank" rel="noopener noreferrer">Download for Older Devices</a>
+      </div>
+    </div>
+  </main>
 
-<p class="feature">New UI design for a cleaner interface</p>
-<p class="feature">Hide / Unhide chat feature added</p>
-<p class="feature">Improved smooth messaging experience</p>
-<p class="feature">Better conversation flow</p>
-<p class="feature">UI polish and performance improvements</p>
+  <footer>
+    Made in India 🇮🇳<br />
+    Vartalabh – Meaningful Conversations<br />
+    Created by idcare19 / Avi
+  </footer>
 
-<a href="https://github.com/idcare19/Vartalabh/releases/download/v2.1.0/vartalabh-2.1.0.apk" class="btn btn-info mt-3">
-Download v2.1.0 APK
-</a>
-
-</div>
-
-
-<div class="card-box">
-
-<h3>Previous Version — v1.2.0</h3>
-
-<p class="feature">Signup & login system</p>
-<p class="feature">Email or username login</p>
-<p class="feature">Profile picture upload</p>
-<p class="feature">Message edit feature</p>
-<p class="feature">Delete messages</p>
-<p class="feature">Reply to messages</p>
-<p class="feature">Message reactions</p>
-<p class="feature">Dark & Light theme support</p>
-
-</div>
-
-
-<div class="card-box">
-
-<h3>Old vs New Version Comparison</h3>
-
-<div class="row g-4">
-
-<div class="col-md-6">
-<div class="compare-box">
-
-<h4>v1.2.0</h4>
-
-<ul style="color:#94a3b8">
-
-<li>Core messaging features added</li>
-<li>Login system introduced</li>
-<li>Profile pictures added</li>
-<li>Message edit & delete</li>
-<li>Replies and reactions</li>
-<li>Theme support</li>
-
-</ul>
-
-</div>
-</div>
-
-<div class="col-md-6">
-<div class="compare-box">
-
-<h4>v2.1.0</h4>
-
-<ul style="color:#94a3b8">
-
-<li>New UI design</li>
-<li>Hide / Unhide chat feature</li>
-<li>Smoother chat experience</li>
-<li>Better interface polish</li>
-<li>Improved conversation flow</li>
-<li>Built on v1.2.0 features</li>
-
-</ul>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card-box">
-
-<h3>Release Timeline</h3>
-
-<p class="feature"><strong>v1.2.0</strong> — Added core messaging features and login system.</p>
-
-<p class="feature"><strong>v2.1.0</strong> — Added new UI, hide/unhide chat and smoother experience.</p>
-
-<p class="feature"><strong>Upcoming</strong> — Push notifications, improved profiles and better social features.</p>
-
-</div>
-
-</div>
-</section>
-
-
-<footer>
-
-Made in India 🇮🇳 • Vartalabh Update Report  
-Created by idcare19 / Avi
-
-</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
